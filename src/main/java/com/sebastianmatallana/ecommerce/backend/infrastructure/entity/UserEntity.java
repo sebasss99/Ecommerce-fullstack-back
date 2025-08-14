@@ -1,4 +1,4 @@
-package com.sebastianmatallana.ecommerce.backend.infrastructure;
+package com.sebastianmatallana.ecommerce.backend.infrastructure.entity;
 
 import com.sebastianmatallana.ecommerce.backend.domain.model.UserType;
 import jakarta.persistence.*;
@@ -22,7 +22,7 @@ public class UserEntity {
     private String lastName;
     @Column(unique = true)
     private String email;
-    private String adress;
+    private String address;
     private String phone;
     private String password;
     @Enumerated(EnumType.STRING)
