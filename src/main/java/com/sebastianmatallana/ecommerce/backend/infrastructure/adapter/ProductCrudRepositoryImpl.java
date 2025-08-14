@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @AllArgsConstructor
-public class IProductCrudRepositoryImpl implements IProductRepository {
+public class ProductCrudRepositoryImpl implements IProductRepository {
 
     private final IProductCrudRepository iProductCrudRepository;
     private final ProductMapper productMapper;
