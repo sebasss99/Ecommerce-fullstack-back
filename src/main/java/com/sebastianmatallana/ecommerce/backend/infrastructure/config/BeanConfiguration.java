@@ -1,9 +1,11 @@
 package com.sebastianmatallana.ecommerce.backend.infrastructure.config;
 
 import com.sebastianmatallana.ecommerce.backend.application.CategoryService;
+import com.sebastianmatallana.ecommerce.backend.application.OrderService;
 import com.sebastianmatallana.ecommerce.backend.application.ProductService;
 import com.sebastianmatallana.ecommerce.backend.application.UserService;
 import com.sebastianmatallana.ecommerce.backend.domain.port.ICategoryRepository;
+import com.sebastianmatallana.ecommerce.backend.domain.port.IOrderRepository;
 import com.sebastianmatallana.ecommerce.backend.domain.port.IProductRepository;
 import com.sebastianmatallana.ecommerce.backend.domain.port.IUserRepository;
 import org.springframework.context.annotation.Bean;
@@ -24,5 +26,10 @@ public class BeanConfiguration {
     @Bean
     public ProductService productService(IProductRepository iProductRepository) {
         return new ProductService(iProductRepository);
+    }
+
+    @Bean
+    public OrderService orderService(IOrderRepository iOrderRepository) {
+        return new OrderService(iOrderRepository);
     }
 }
